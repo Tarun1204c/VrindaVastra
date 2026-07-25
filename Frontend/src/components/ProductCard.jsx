@@ -4,16 +4,18 @@ const BASE_URL =
   "https://e-commerce-website-vrindavastra-2.onrender.com";
 
 export default function ProductCard({ product }) {
-  const imageUrl =
-    product.image && product.image.length > 0
-      ? `${BASE_URL}/uploads/${encodeURIComponent(product.image[0])}`
-      : "https://via.placeholder.com/300x350?text=No+Image";
+  const imageName = Array.isArray(product.image)
+    ? product.image[0]
+    : product.image;
+
+  const imageUrl = imageName
+    ? `${BASE_URL}/uploads/${encodeURIComponent(imageName)}`
+    : "https://via.placeholder.com/300x350?text=No+Image";
 
   return (
     <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
       <div className="card h-100 shadow-sm border-0 rounded-4">
 
-        {/* Product Image */}
         <img
           src={imageUrl}
           alt={product.name}

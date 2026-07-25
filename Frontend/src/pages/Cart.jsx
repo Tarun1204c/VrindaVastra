@@ -160,7 +160,6 @@ export default function Cart() {
   // =========================
   return (
     <>
-      <Navbar />
 
       <div className="container my-5">
 
