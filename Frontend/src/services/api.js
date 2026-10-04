@@ -2,7 +2,7 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL:
-    "https://e-commerce-website-vrindavastra-2.onrender.com/api",
+      "https://vrindavastra.onrender.com/api",
   headers: {
     "Content-Type": "application/json",
   },
