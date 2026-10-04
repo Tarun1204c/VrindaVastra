@@ -29,7 +29,7 @@ connectDB();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://e-commerce-website-vrindavastra-jxw.vercel.app",
+  "https://vrinda-vastra.vercel.app",
 ];
 
 app.use(
